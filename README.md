@@ -35,7 +35,7 @@ Built for developers, entrepreneurs, and blockchain enthusiasts who want to laun
 
 ## 🖼 Screenshots
 
-*(Add your project screenshots here)*
+
 
 <div align="center">
   <img src="https://via.placeholder.com/800x450/1E3A8A/60A5FA?text=Token+Creator" alt="Token Creator" width="400">
