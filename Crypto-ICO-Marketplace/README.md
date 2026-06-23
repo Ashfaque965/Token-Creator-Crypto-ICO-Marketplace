@@ -194,13 +194,4 @@ If this project helped you, please give it a **STAR** ⭐ and share it with the 
 **Ready to launch your own ICO? Start building today!**
 ```
 
----
 
-**How to use:**
-1. Go to your GitHub repository
-2. Click on `README.md`
-3. Click the edit button (pencil icon)
-4. Delete everything and paste the above content
-5. Click **Commit changes**
-
-Would you like me to add badges, more sections, or make it more marketing-oriented?
