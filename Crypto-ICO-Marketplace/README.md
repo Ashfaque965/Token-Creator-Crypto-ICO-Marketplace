@@ -1,6 +1,4 @@
-**Here is the complete, ready-to-copy-paste README.md file:**
 
-```markdown
 # 🪙 Token Creator & ICO Marketplace
 
 ![Banner](https://via.placeholder.com/1280x400/0A2540/00D4FF?text=Token+Creator+%26+ICO+Marketplace)
