@@ -1,112 +1,208 @@
-# Build & Deploy Your Own ICO Marketplace and Token Creator
+**Here is the complete, ready-to-copy-paste README.md file:**
 
-Build & Deploy Your Own ICO Marketplace and Token Creator
+```markdown
+# 🪙 Token Creator & ICO Marketplace
 
-Dive into the world of blockchain and cryptocurrency with our comprehensive guide to building and deploying your own ICO Marketplace and Token Creator. This course covers everything from the basics of Initial Coin Offerings (ICOs) to advanced development techniques. Learn how to create, manage, and deploy tokens on the Ethereum blockchain, design a user-friendly marketplace, and ensure the security and scalability of your platform. Whether you're an entrepreneur, developer, or blockchain enthusiast, this guide will provide you with the knowledge and tools you need to launch a successful ICO and drive your project to new heights.
+![Banner](https://via.placeholder.com/1280x400/0A2540/00D4FF?text=Token+Creator+%26+ICO+Marketplace)
 
-## Project Overview
+**A Full-Stack Decentralized Platform to Create ERC-20 Tokens and Launch Your Own ICO / Presale**
 
-![alt text](https://www.daulathussain.com/wp-content/uploads/2024/06/Build-Deploy-Your-Own-ICO-Marketplace-and-Token-Creator.jpg)
+---
 
-Kindly follow the following Instructions to run the project in your system and install the necessary requirements
+## ✨ Features
 
-- [Final Source Code](https://www.theblockchaincoders.com/sourceCode/build-and-deploy-your-own-ico-marketplace-and-token-creator)
+- ✅ **Dynamic Token Creator** – Deploy custom ERC-20 tokens instantly
+- ✅ **ICO / Presale Smart Contract** – With full admin controls
+- ✅ **Modern & Responsive UI** built with Next.js
+- ✅ **Wallet Integration** – MetaMask & WalletConnect
+- ✅ **Real-time Sale Progress** with live raised amount
+- ✅ **Admin Dashboard** – Manage rate, pause/resume sale, withdraw funds
+- ✅ **Referral System** (Ready)
+- ✅ **Token Vesting** (Ready)
+- ✅ **Multi-Chain Support** (Ethereum, Polygon, BSC, etc.)
 
-#### Setup Video
+---
 
-- [Final Code Setup video](https://youtu.be/eCr3pr0atzM?si=uWn4kYmtaEuWt_w9)
+## 🎥 Demo & Setup Video
 
-```https://code.visualstudio.com/download
-  WATCH: Setup & Demo Of Project
+**Watch Full Setup & Demo** → [Click Here](https://youtu.be/) <!-- Add your video link -->
+
+---
+
+## 🛠 Tech Stack
+
+| Layer           | Technology                          |
+|----------------|-------------------------------------|
+| Frontend       | Next.js, React, Tailwind CSS        |
+| Web3           | wagmi, viem, RainbowKit             |
+| Smart Contracts| Solidity 0.8.20, OpenZeppelin      |
+| Development    | Hardhat / Remix IDE                 |
+| Network        | Polygon Amoy / Sepolia / Ethereum   |
+
+---
+
+## 📸 Screenshots
+
+*(Add your actual screenshots here)*
+
+![Token Creator Page](https://via.placeholder.com/800x450/1E3A8A/60A5FA?text=Token+Creator)
+![ICO Marketplace](https://via.placeholder.com/800x450/312E81/818CF8?text=ICO+Marketplace)
+![Admin Dashboard](https://via.placeholder.com/800x450/0F172A/64748B?text=Admin+Dashboard)
+
+---
+
+## Prerequisites
+
+- Node.js **v18+**
+- NPM or Yarn
+- MetaMask Wallet
+- Testnet Funds (Polygon Amoy recommended)
+
+---
+
+## Installation & Local Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Ashfaque965/Token-Creator-Crypto-ICO-Marketplace.git
+cd Token-Creator-Crypto-ICO-Marketplace
 ```
 
-#### Install Vs Code Editor
+### 2. Install Dependencies
 
-```https://code.visualstudio.com/download
-  GET: VsCode Editor
+```bash
+npm install
 ```
 
-#### NodeJs & NPM Version
+### 3. Create Environment File
 
-```https://nodejs.org/en/download
-  NodeJs: v18.12.1 || LATEST
-  NPM: 8.19.2 || LATEST
+Create `.env.local` in the root folder:
+
+```env
+NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_walletconnect_project_id
+
+# Contract Addresses (Update after deployment)
+NEXT_PUBLIC_TOKEN_FACTORY_ADDRESS=0x...
+NEXT_PUBLIC_ICO_ADDRESS=0x...
+
+NEXT_PUBLIC_RPC_URL=https://rpc-amoy.polygon.technology
 ```
 
-#### Clone Starter File
+### 4. Run the Project
 
-```https://github.com/daulathussain/Airdrop-Crypto-Starter-File
-  GET: Project Starter File Download
+```bash
+npm run dev
 ```
 
-All you need to follow the complete project and follow the instructions which are explained in the tutorial by Daulat
+Open **http://localhost:3000** in your browser.
 
-## Final Code Instruction
+---
 
-If you download the final source code then you can follow the following instructions to run the Dapp successfully
+## Smart Contract Deployment
 
-#### What You Will Get
+### Option 1: Using Remix IDE (Easiest)
 
-Once you download the final source code, you will get a ZIP file, then you will have 2 FOLDERS & README file which contain all the instructions to run the project and set video
+1. Deploy `TokenFactory.sol`
+2. Use Factory to create new tokens
+3. Deploy `ICO.sol` with your token address
+4. Copy ABI and deployed addresses
 
-#### Setup Video
+### Option 2: Using Hardhat (Recommended for Production)
 
-```https://code.visualstudio.com/download
-  WATCH: Setup & Demo Of Project
+```bash
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network polygonAmoy
 ```
 
-#### Final Source Code
+---
 
-```https://www.theblockchaincoders.com/SourceCode
-  Download the Final Source Code
+## Project Structure
+
+```bash
+├── contracts/
+│   ├── CustomToken.sol
+│   ├── TokenFactory.sol
+│   ├── ICO.sol
+│   └── TokenVesting.sol
+├── components/
+│   ├── TokenCreator.jsx
+│   ├── BuyTokens.jsx
+│   ├── AdminDashboard.jsx
+│   ├── SaleProgress.jsx
+│   └── TokenCard.jsx
+├── pages/ or app/
+├── utils/
+│   └── abis.js
+├── scripts/
+│   └── deploy.js
+├── hardhat.config.js
+└── README.md
 ```
 
-#### Install Vs Code Editor
+---
 
-```https://code.visualstudio.com/download
-  GET: VsCode Editor
+## Key Smart Contracts
+
+- **CustomToken** – Standard + mintable ERC-20
+- **TokenFactory** – One-click token deployment
+- **ICO** – Presale with admin controls
+- **TokenVesting** – Cliff + linear vesting
+
+---
+
+## Future Roadmap
+
+- [ ] Auto Liquidity Pool (Uniswap / PancakeSwap)
+- [ ] Full TypeScript Conversion
+- [ ] User Portfolio Dashboard
+- [ ] KYC / Whitelist Module
+- [ ] Multi-token Payment (USDT, USDC)
+- [ ] Airdrop & Staking
+- [ ] Analytics & Charts
+
+---
+
+## Contributing
+
+Pull requests are welcome! Feel free to fork and improve the project.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## Author
+
+**Ashfaque Quraishi**
+
+- GitHub: [Ashfaque965](https://github.com/Ashfaque965)
+
+---
+
+## ⭐ Support the Project
+
+If this project helped you, please give it a **STAR** ⭐ and share it with the community!
+
+---
+
+**Built with ❤️ for Blockchain Developers & Entrepreneurs**
+
+---
+
+**Ready to launch your own ICO? Start building today!**
 ```
 
-#### NodeJs & NPM Version
+---
 
-```https://nodejs.org/en/download
-  NodeJs: v18.12.1 || LATEST
-  NPM: 8.19.2 || LATEST
-```
+**How to use:**
+1. Go to your GitHub repository
+2. Click on `README.md`
+3. Click the edit button (pencil icon)
+4. Delete everything and paste the above content
+5. Click **Commit changes**
 
-#### Test Faucets
-
-Alchemy will provide you with some free test faucets which you can transfer to your wallet address for deploying the contract
-
-```https://faucet.polygon.technology/
-  Get: Free Test Faucets
-  URL : https://faucet.polygon.technology/
-```
-
-#### RemixID
-
-We are using RemixID for deploying the contract and generation of the ABI in the project, but you can use any other tools like Hardhat, etc.
-
-```https://remix-project.org
-  OPEN: RemixID
-  URL: https://remix-project.org
-```
-
-#### Polygon Mumbai
-
-```https://amoy.polygonscan.com/
-  OPEN: Polygon Amoy
-  URL: https://amoy.polygonscan.com/
-```
-
-## Important Links
-
-- [Get Pro Blockchain Developer Course](https://www.theblockchaincoders.com/pro-nft-marketplace)
-- [Support Creator](https://bit.ly/Support-Creator)
-- [All Projects Source Code](https://www.theblockchaincoders.com/SourceCode)
-
-## Authors
-
-- [@theblockchaincoders.com](https://www.theblockchaincoders.com/)
-- [@consultancy](https://www.theblockchaincoders.com/consultancy)
-- [@youtube](https://www.youtube.com/@daulathussain)
+Would you like me to add badges, more sections, or make it more marketing-oriented?
